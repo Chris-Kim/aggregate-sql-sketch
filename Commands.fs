@@ -10,6 +10,8 @@ open Sketch.Events.Cart
 [<RequireQualifiedAccess>]
 module Cart =
     type DomainError =
+        | CartIsNotFound
+        | FailedToAddCart
         | CartAlreadyExists of CustomerCart
         | CartCannotBeChanged of CustomerCart
         | CartCannotBeCheckedOut of CustomerCart
